@@ -1,16 +1,14 @@
-# Gait Analysis with MediaPipe & OpenCV  
+Description  
+This script analyzes an MP4 video of a person running, detects foot-ground contact moments, draws skeletons and joint angles, and saves the results into separate JSON files. For best results, the video should be recorded from a side view (perpendicular angle) using a stable camera.  
 
-Opis  
-Ten skrypt analizuje film mp4 z osobą biegnącą, wykrywa momenty kontaktu stóp z podłożem, rysuje szkielety i kąty oraz zapisuje wyniki do osobnych plików JSON. Dla najlepszych efektów film powinien być nagrany w kącie prostym względem biegacza.  
+Requirements  
+Python 3.9  
+pip install -r requirements.txt  
 
-Wymagania  
--Python 3.8 lub wyższy  
--pip install -r requirements.txt  
-
-Uruchomienie  
+Execution  
 python main.py  
 
-Po zakończeniu działałania python main.py w katalogu output pojawią się pliki:  
--analysis.mp4 (przetworzony film z narsowanym szkieletem i kątami)  
--frames.json (lista zdarzeń)  
--summary.json (podsumowanie + średnie kąty)  
+After running python main.py, the following files will be generated in the Output directory:  
+analysis.mp4 – the processed video with drawn skeleton and angles  
+frames.json – a list of detected gait events  
+summary.json – a summary with counts and average angles  
